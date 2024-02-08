@@ -1,0 +1,34 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+#app {
+  max-width: 1280px;
+  font-weight: normal;
+  font-family: 'Mitr', sans-serif;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  
+  a:hover {
+    transform: scale(1.01);
+  }
+}
+
+@media (min-width: 0) {
+  body {
+    padding: 0;
+    background: transparent;
+    color: black;
+  }
+  #app {
+    padding: 0;
+    
+  }
+}
