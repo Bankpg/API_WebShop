@@ -41,8 +41,7 @@ export const useProductStore = defineStore("useProductStore", () => {
             }
         })
     })
-
-
+    
     return { fetchProduct, product, men, women, jewelery, electronics, search_product, input, list_product, load_product }
 })
 
