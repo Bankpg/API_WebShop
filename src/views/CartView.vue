@@ -11,7 +11,7 @@
                 style="display: flex; flex-direction: column; min-width: 200px; align-items: center;">
                 <v-img src="https://img2.pic.in.th/pic/Wavy_Tech-17_Single-04.png" width="300px"></v-img>
                 <p style="font-size: 30px; font-weight: bold; color: white; text-shadow: 0 0 5px black;">ราคารวม ${{
-                    cart_store.total }}</p>
+                    cart_store.total.toFixed(2) }}</p>
                 <v-row class="mt-5 ga-5">
                     <v-btn @click="" color="green"><v-icon icon="mdi-checkbox-marked-circle-outline"></v-icon>checkout
                     </v-btn>
@@ -31,7 +31,7 @@
                         <v-col cols="7" class="pa-0">
                             <v-card-title class="ps-0 py-2 font-weight-bold">{{ item.product.title }}</v-card-title>
 
-                            <p style="font-size: 25px; font-weight: normal;">${{ cart[index].total_product }}</p>
+                            <p style="font-size: 25px; font-weight: normal;">${{ cart[index].total_product.toFixed(2) }}</p>
 
                             <v-btn-group class="mt-auto" rounded="xl" style="height: 40px;">
                                 <v-btn v-if="cart[index].amount <= 1" variant="outlined" size="x-small"

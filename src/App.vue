@@ -1,5 +1,6 @@
 <script setup>
 import Nav from './components/Nav.vue'
+import Footer from './components/Footer.vue';
 import { RouterLink, RouterView } from 'vue-router'
 import { HalfCircleSpinner } from 'epic-spinners'
 
@@ -29,6 +30,7 @@ onMounted(() => cart_store.loadFromLocalStorage())
         color="white" />
       <RouterView v-else />
     </body>
+    <Footer></Footer>
   </v-parallax>
 </template>
 
