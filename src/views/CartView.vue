@@ -5,9 +5,9 @@
         <p>ไม่มีสินค้าในตะกร้า</p>
     </v-container>
     <v-container v-else
-        style="padding: 30px; border-radius: 20px; background-color: rgba(255, 255, 255, 0.415); backdrop-filter: blur(20px); min-height: 100vh; min-width: 300px;">
+        style="padding: 30px; border-radius: 20px; background-color: rgba(255, 255, 255, 0.415); backdrop-filter: blur(20px); ">
         <v-row class="d-flex justify-center">
-            <v-col cols="4" class="px-0"
+            <v-col cols="4" class="px-0 my-5"
                 style="display: flex; flex-direction: column; min-width: 200px; align-items: center;">
                 <v-img src="https://img2.pic.in.th/pic/Wavy_Tech-17_Single-04.png" width="300px"></v-img>
                 <p style="font-size: 30px; font-weight: bold; color: white; text-shadow: 0 0 5px black;">ราคารวม ${{
@@ -19,19 +19,18 @@
                 </v-row>
             </v-col>
 
-            <v-col cols="auto" class="ps-0" style="width: 700px;">
-                <v-card class="my-5 rounded-xl" color="white" v-for="(item, index) in cart" key="index" height="150px"
+            <v-col cols="auto" class="ps-0" style="width: 700px; overflow: scroll; height: 80vh;">
+                <v-card class="my-5 rounded-xl" color="white" v-for="(item, index) in cart" key="index" height="130px"
                     style="background-color: transparent; padding: 10px;">
                     <v-row style="height: 100%; margin: 0px;">
                         <!--Img-->
-                        <v-col cols="3" class="d-flex justify-center" style="background-color: white; padding: 10px; ">
-                            <v-img class="mx-auto" :src="item.product.image" style="max-height: 100px;"></v-img>
+                        <v-col cols="3" class="d-flex justify-center align-center" style="background-color: white; padding: 10px; ">
+                            <v-img class="mx-auto" :src="item.product.image" style="max-height: 80px;"></v-img>
                         </v-col>
                         <!--Detail-->
                         <v-col cols="7" class="pa-0">
                             <v-card-title class="ps-0 py-2 font-weight-bold">{{ item.product.title }}</v-card-title>
-
-                            <p style="font-size: 25px; font-weight: normal;">${{ cart[index].total_product.toFixed(2) }}</p>
+                            <v-row class="ma-0">
 
                             <v-btn-group class="mt-auto" rounded="xl" style="height: 40px;">
                                 <v-btn v-if="cart[index].amount <= 1" variant="outlined" size="x-small"
@@ -42,6 +41,11 @@
                                 <v-btn variant="outlined" size="x-small"
                                     @click="cart_store.increment_amount(index)">+</v-btn>
                             </v-btn-group>
+                            <v-spacer></v-spacer>
+                            <p style="font-size: 25px; font-weight: normal;">${{ cart[index].total_product.toFixed(2) }}</p>
+
+                            </v-row>
+                            
                         </v-col>
                         <!--Action-->
                         <v-col cols="2" class="d-flex justify-center my-auto">

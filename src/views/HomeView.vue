@@ -1,7 +1,7 @@
 <template>
   <header>
     <v-row class="justify-center ">
-      <v-col cols="6" class="">
+      <v-col cols="6" class="d-flex justify-center">
         <v-img class="mx-auto" src="https://img5.pic.in.th/file/secure-sv1/-removebg.png" max-height="500px"
           max-width="800px" min-width="400px" cover=""></v-img>
       </v-col>
@@ -16,8 +16,8 @@
 
   </header>
   <div class="d-flex flex-column ga-5">
-    <v-container>
-      <p class="d-flex position-relative ms-5"
+    <v-container class="pt-0">
+      <p class="d-flex position-relative ms-5 "
         style="color: white; bottom: -20px; z-index: 100; font-size: 35px; font-weight: bold; text-shadow: 0 0 5px black;">
         Top rate</p>
       <v-slide-group class="pa-4 rounded-xl" show-arrows
