@@ -6,12 +6,11 @@
     </v-container>
     <v-container v-else
         style="padding: 30px; border-radius: 20px; background-color: rgba(255, 255, 255, 0.415); backdrop-filter: blur(20px); ">
-        <v-row class="d-flex justify-center">
-            <v-col cols="4" class="px-0 my-5"
-                style="display: flex; flex-direction: column; min-width: 200px; align-items: center;">
-                <v-img src="https://img2.pic.in.th/pic/Wavy_Tech-17_Single-04.png" width="300px"></v-img>
-                <p style="font-size: 30px; font-weight: bold; color: white; text-shadow: 0 0 5px black;">ราคารวม ${{
-                    cart_store.total.toFixed(2) }}</p>
+        <v-row class="d-flex justify-center ga-5">
+            <v-col class="px-0 rounded-xl d-flex flex-column align-center"
+                style="min-width: 200px; background-color: white;">
+                <v-img src="https://img.freepik.com/free-vector/discount-concept-illustration_114360-2301.jpg?w=1060&t=st=1707922494~exp=1707923094~hmac=7af709c74e6be90cc6377f96f32abd1c95a4886329bccf5e144ef210b55e9e93" width="300px"></v-img>
+                <p style="font-size: 30px; font-weight: bold; color: rgb(0, 0, 0);">ราคารวม ${{cart_store.total.toFixed(2)}}</p>
                 <v-row class="mt-5 ga-5">
                     <v-btn @click="" color="green"><v-icon icon="mdi-checkbox-marked-circle-outline"></v-icon>checkout
                     </v-btn>
@@ -19,8 +18,8 @@
                 </v-row>
             </v-col>
 
-            <v-col cols="auto" class="ps-0" style="width: 700px; overflow: scroll; height: 80vh;">
-                <v-card class="my-5 rounded-xl" color="white" v-for="(item, index) in cart" key="index" height="130px"
+            <v-col cols="auto" class="pa-0" style="width: 700px; overflow: scroll; height: 80vh;">
+                <v-card class="mb-5 rounded-xl" color="white" v-for="(item, index) in cart" key="index" height="130px"
                     style="background-color: transparent; padding: 10px;">
                     <v-row style="height: 100%; margin: 0px;">
                         <!--Img-->
@@ -72,3 +71,10 @@ const cart_store = useCartStore()
 const cart = computed(() => cart_store.cart_previews)
 console.log("Cart : ", cart.value)
 </script>
+
+<style scoped>
+.v-row{
+    margin: 0;
+    justify-content: center;
+}
+</style>
